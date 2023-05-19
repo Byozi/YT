@@ -33,7 +33,7 @@ async def init():
         and not config.STRING5
     ):
         LOGGER("YukkiMusic").error(
-            "No Assistant Clients Vars Defined!.. Exiting Process."
+            "Tanımlanmış Yardımcı İstemci Varlığı Yok!.. İşlemden Çıkılıyor."
         )
         return
     if (
@@ -41,7 +41,7 @@ async def init():
         and not config.SPOTIFY_CLIENT_SECRET
     ):
         LOGGER("YukkiMusic").warning(
-            "No Spotify Vars defined. Your bot won't be able to play spotify queries."
+            "Spotify Değişkenleri tanımlanmadı. Botunuz spotify sorgularını oynatamayacak."
         )
     try:
         users = await get_gbanned()
@@ -56,7 +56,7 @@ async def init():
     for all_module in ALL_MODULES:
         importlib.import_module("YukkiMusic.plugins" + all_module)
     LOGGER("Yukkimusic.plugins").info(
-        "Successfully Imported Modules "
+        "Modüller Başarıyla İçe Aktarıldı "
     )
     await userbot.start()
     await Yukki.start()
@@ -66,16 +66,16 @@ async def init():
         )
     except NoActiveGroupCall:
         LOGGER("YukkiMusic").error(
-            "[ERROR] - \n\nPlease turn on your Logger Group's Voice Call. Make sure you never close/end voice call in your log group"
+            "[ERROR] - \n\nLütfen Kayıt Grubu Sesli Aramanızı açın. Kayıt grubunuzdaki sesli aramayı asla kapatmadığınızdan emin olun."
         )
         sys.exit()
     except:
         pass
     await Yukki.decorators()
-    LOGGER("YukkiMusic").info("Yukki Music Bot Started Successfully")
+    LOGGER("YukkiMusic").info("Sera Music Bot Başlatıldı! İyi Yayınlar")
     await idle()
 
 
 if __name__ == "__main__":
     loop.run_until_complete(init())
-    LOGGER("YukkiMusic").info("Stopping Yukki Music Bot! GoodBye")
+    LOGGER("YukkiMusic").info("Sera Music Bot Durdu! Görüşmek Üzere")

@@ -73,7 +73,7 @@ start_5 : "{0} adlı kullanıcının Sudo Kullanıcısının[{1}] bir üyesi soh
 start_6 : "❗️ **Süper Grup Gerekli** ❗️\n\nLütfen **grubunuzu** **süper gruba** dönüştürün ve sonra beni tekrar ekleyin.\n\n**Üst grup nasıl yapılır?**\n✅ Grubunuzun sohbet geçmişini oluşturun **görünür** yapın önce."
 
 # Help
-help_1 : "Daha fazla bilgi için aşağıdaki butonlara tıklayın. Komutlar ve öğreticileri görmek istiyorsanız ( botun nasıl çalıştığı hakkında merak edilenler ve her şey ):-\n\nTüm komutlar aşşağıdaki butonlara basarak görebilirsiniz: /"
+help_1 : "❗️ **Klavuza hoş geldiniz.❗️ ** -\n\n Aşağıda sizlere fonskiyonlar ile alakalı butonlar tanımlanmıştır, ilgili göreve tıklayarak komut listesini açabilirsiniz.\n\n  Lütfen aşağıdan bir komut seçiniz : "
 help_2 : "Yardım için PM'den bana ulaşın."
 
 # Settings
@@ -217,7 +217,7 @@ queue_3 : "<u>**Queued Tracks:</u>**  [Checkout More Queued Tracks From Here]({0
 queue_4 : "⏳ Sıraya eklendi **#{0}\n\n🔘Başlık:** {1}\n**⏱Süre:** {2}\n👉**Talep Eden:** {3}"
 
 # All Streaming Lines
-stream_1 : "📡 **Yayın Başladı**\n\n👉**Talep Eden:** {0}\n🔦**Bilgi: **[Buradan]({1})"
+stream_1 : "📡 **Yayın Başladı**\n\n👉**Talep Eden:** {0}\n🔦**Şarkı Bilgisi İçin: **[👉🏻 Buraya Tıkla ]({1})"
 stream_2 : "📡 **URL ile Yayına Başladı **\n\n👉**Talep Eden:** {0}"
 stream_3 : "📡 **Yayın Başladı**\n\n**🔘Başlık:** {0}\n⌛️**Süre**: {1}\n👤**İsteyen:** {2}"
 stream_4 : "📡 **Akış Başlatıldı**\n\n**🔘Başlık:** [{0}]({1})\n⌛️**Süre**: {2}\n👤**İsteyen:** {3}"
@@ -244,10 +244,10 @@ S_B_7 : "👑 Bot Sahibi 👑 "
 S_B_8 : "🔎 Nasıl kullanılır? Komutlar Menüsü."
 
 #Help 
-H_B_1 : "Admin Commands"
-H_B_2 : "Play Commands"
-H_B_3 : "Bot Commands"
-H_B_4 : "Extra Commands"
+H_B_1 : "Admin Komutları"
+H_B_2 : "Oynatma Komutları"
+H_B_3 : "Bot Komutları"
+H_B_4 : "Extra Komutlar"
 H_B_5 : "Close Menu"
 
 #PlayMode
@@ -263,8 +263,8 @@ P_B_4 : "🎵 Play Playlist"
 
 #Playlist
 PL_B_1 : "🚀 Play Playlist"
-PL_B_2 : "✚ Playlists"
-PL_B_3 : "✚ Additional"
+PL_B_2 : "✚ Oynatma Listesi"
+PL_B_3 : "✚ Müzik Ayarları"
 PL_B_4 : "📡 Play Mode"
 PL_B_5 : "🔄 Del Whole Playlist"
 PL_B_6 : "↗️ Delete Playlist"
@@ -280,7 +280,7 @@ ST_B_2 : "🎥 Vid Quality"
 ST_B_3 : "🎩 Auth Users"
 ST_B_4 : "📱 Dashboard"
 ST_B_5 : "▶️ Play Mode"
-ST_B_6 : "🏳️‍🌈 Language"
+ST_B_6 : "🌍 Dil Ayarları"
 ST_B_7 : "🔄 Clean Mode"
 ST_B_8 : "{0} Low Quality Audio"
 ST_B_9 : "{0} Medium Quality Audio"

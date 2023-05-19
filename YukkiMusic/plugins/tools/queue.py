@@ -97,9 +97,9 @@ async def ping_com(client, message: Message, _):
         else:
             IMAGE = get_image(videoid)
     send = (
-        "**⌛️Duration:** Unknown Duration Stream\n\nClick on button below to get whole queued list."
-        if DUR == "Unknown"
-        else "\nClick on button below to get whole queued list."
+        "**⌛️Süre:** Bilinmeyen Süre Akış\n\nSıraya alınan listenin tamamını almak için aşağıdaki düğmeyi tıklayın."
+        if DUR == "Bilinmeyen"
+        else "\nSıraya alınmış listenin tamamını almak için aşağıdaki düğmeyi tıklayın."
     )
     cap = f"""**{config.MUSIC_BOT_NAME} Player**
 
@@ -203,11 +203,11 @@ async def queued_tracks(client, CallbackQuery: CallbackQuery, _):
     for x in got:
         j += 1
         if j == 1:
-            msg += f'Currently Playing:\n\n🏷Title: {x["title"]}\nDuration: {x["dur"]}\nBy: {x["by"]}\n\n'
+            msg += f'Çalan:\n\n🏷Title: {x["title"]}\nSüre: {x["dur"]}\nBy: {x["by"]}\n\n'
         elif j == 2:
-            msg += f'Queued:\n\n🏷Title: {x["title"]}\nDuration: {x["dur"]}\nBy: {x["by"]}\n\n'
+            msg += f'Sıradaki:\n\n🏷Title: {x["title"]}\nSüre: {x["dur"]}\nBy: {x["by"]}\n\n'
         else:
-            msg += f'🏷Title: {x["title"]}\nDuration: {x["dur"]}\nBy: {x["by"]}\n\n'
+            msg += f'🏷Başlık: {x["title"]}\nDuration: {x["dur"]}\nBy: {x["by"]}\n\n'
     if "Queued" in msg:
         if len(msg) < 700:
             await asyncio.sleep(1)
@@ -277,9 +277,9 @@ async def queue_back(client, CallbackQuery: CallbackQuery, _):
         else:
             IMAGE = get_image(videoid)
     send = (
-        "**⌛️Duration:** Unknown Duration Stream\n\nClick on button below to get whole queued list."
+        "**⌛️Süre:** Bilinmeyen Süre Akış\n\nAşağıdaki düğmeye tıklayarak sıranın tamamını alabilirsiniz:"
         if DUR == "Unknown"
-        else "\nClick on button below to get whole queued list."
+        else "\nAşağıdaki düğmeye tıklayarak tüm sıralı listeyi alabilirsiniz:."
     )
     cap = f"""**{config.MUSIC_BOT_NAME} Player**
 

@@ -11,24 +11,24 @@ HELP_1 = """✅**<u>Yönetici Komutları:</u>**
 
 **c** Kanal Komutları İçerir.
 
-/duraklat veya /cpause - Oynatılan müziği duraklatır.
-/devam veya /cresume - Duraklatılmış müziği devam ettirir.
-/sustur veya /cmute - Oynatılan müziği sessize alır.
-/sesiac veya /cunmute - Sessiz yapılan müziği geri açar.
-/atla veya /cskip - Şu anda çalınan müziği atlar.
-/durdur veya /cstop - Oynatılan müziği durdurur.
-/shuffle veya /cshuffle - Sıradaki çalma listesini rastgele karıştırır.
-/seek veya /cseek - Müziği belirtilen süreye ileri alır.
-/seekback veya /cseekback - Müziği belirtilen süreye geri alır.
+/duraklat - Oynatılan müziği duraklatır.
+/devam  - Duraklatılmış müziği devam ettirir.
+/sustur - Oynatılan müziği sessize alır.
+/sesiac - Sessiz yapılan müziği geri açar.
+/atla  - Şu anda çalınan müziği atlar.
+/durdur  - Oynatılan müziği durdurur.
+/karistir - Sıradaki çalma listesini rastgele karıştırır.
+/seek - Müziği belirtilen süreye ileri alır.
+/seekback - Müziği belirtilen süreye geri alır.
 /restart - Sohbetiniz için botu yeniden başlatır.
 
 
 ✅<u>**Spesifik Atlama:**</u>
-/atla veya /cskip [Sayı(örnek: 3)]
-- Müziği belirtilen sıra numarasına atlar. Örnek: /skip 3, müziği üçüncü sıradaki müziğe atlar ve kuyrukta bulunan 1. ve 2. müzikleri görmezden gelir.
+/atla [Sayı(örnek: 3)]
+- Müziği belirtilen sıra numarasına atlar. Örnek: /atla 3, müziği üçüncü sıradaki müziğe atlar ve kuyrukta bulunan 1. ve 2. müzikleri görmezden gelir.
 
 ✅<u>**Döngü Oynatma:**</u>
-/dongu veya /cloop [enabled/disabled] veya [1-10 arasında sayılar]
+/dongu  [enabled/disabled] veya [1-10 arasında sayılar]
 - Etkinleştirildiğinde, bot mevcut çalınan müziği 1-10 kez sesli sohbette tekrarlar. Varsayılan olarak 10 kez tekrarlar.
 
 ✅<u>**Yetkilendirilmiş Kullanıcılar:**</u>
@@ -40,7 +40,7 @@ Yetkili kullanıcılar, sohbetinizde yönetici hakları olmadan yönetici komutl
 
 HELP_2 = """✅<u>**Oynatma Komutları:**</u>
 
-Mevcut Komutlar = /play , /vplay , /cplay
+Mevcut Komutlar = /oynat , /voynat , /cplay
 
 ForcePlay Komutları = /playforce , /vplayforce , /cplayforce
 
@@ -48,27 +48,23 @@ c, kanal oynatması anlamına gelir.
 v, video oynatması anlamına gelir.
 force, zorla oynatma anlamına gelir.
 
-/play veya /vplay veya /cplay - Bot, verdiğiniz sorguyu sesli sohbette oynatmaya başlar veya sesli sohbetlerde canlı bağlantıları akıtır.
+/oynat veya /voynat veya /cplay - Bot, verdiğiniz sorguyu sesli sohbette oynatmaya başlar veya sesli sohbetlerde canlı bağlantıları akıtır.
 
 /playforce veya /vplayforce veya /cplayforce - Force Play, sesli sohbette çalınan mevcut müziği durdurur ve aranan müziği sırayı bozmadan hemen çalmaya başlar.
 
 /channelplay [Sohbet kullanıcı adı veya id] veya [Devre dışı] - Kanalı bir gruba bağlar ve grup sesli sohbetinde kanalın müziğini akıtır.
 
 ✅**<u>Bot'un Sunucu Çalma Listeleri:</u>**
-/playlist - Sunuculardaki kaydedilmiş çalma listelerinizi kontrol eder.
+/oynatmalistesi - Sunuculardaki kaydedilmiş çalma listelerinizi kontrol eder.
 /deleteplaylist - Çalma listenizdeki herhangi bir kayıtlı müziği siler.
-/play - Sunuculardan Kaydedilmiş Çalma Listesini Çalmaya Başlar."""
+/oynay - Sunuculardan Kaydedilmiş Çalma Listesini Çalmaya Başlar."""
 
 
 HELP_3 = """✅<u>**Bot Komutları:**</u>
 
-/stats - En İyi 10 Şarkı Küresel İstatistikleri, Botun En İyi 10 Kullanıcısı, Bot Üzerindeki En İyi 10 Sohbet, Bir Sohbette Çalınan En İyi 10 Şarkı vb. Gibi istatistikleri alır.
+/soz [Müzik İsmi] - Belirli bir müziğin sözlerini web üzerinde arar.
 
-/sudolist - Sera Müzik Botunun Sudo Kullanıcılarını kontrol eder.
-
-/lyrics [Müzik İsmi] - Belirli bir müziğin sözlerini web üzerinde arar.
-
-/song [Şarkı İsmi] veya [YT Linki] - Youtube'dan mp3 veya mp4 formatında herhangi bir şarkıyı indirir.
+/sarki [Şarkı İsmi] veya [YT Linki] - Youtube'dan mp3 veya mp4 formatında herhangi bir şarkıyı indirir.
 
 /player - Etkileşimli Bir Oynatma Paneli Alır.
 
@@ -78,11 +74,11 @@ HELP_3 = """✅<u>**Bot Komutları:**</u>
 
 HELP_4 = """✅<u>**Ekstra Komutlar:**</u>
 /start - Müzik Botunu Başlatır.
-/help - Komutların detaylı açıklamalarını içeren Yardım Menüsünü alır.
+/yardim - Komutların detaylı açıklamalarını içeren Yardım Menüsünü alır.
 /ping- Bot'a ping atar ve Bot'un Ram, Cpu vb. istatistiklerini kontrol eder.
 
 ✅<u>Grup Ayarları:</u>
-/settings - Grubun tüm ayarlarını içeren düğmelerle birlikte tam bir ayar paneli alır.
+/ayarlar - Grubun tüm ayarlarını içeren düğmelerle birlikte tam bir ayar paneli alır.
 
 🔗 **Ayarlar seçenekleri**:
 
@@ -90,11 +86,11 @@ HELP_4 = """✅<u>**Ekstra Komutlar:**</u>
 
 2️⃣ **Video Kalitesi** - Sesli sohbette yayınlamak istediğiniz video kalitesini ayarlayabilirsiniz.
 
-3️⃣ **Yetkili Kullanıcılar** - Bu bölümden yönetici komutlarını herkese veya yalnızca yöneticilere değiştirebilirsiniz. Herkese izin verilirse, gruptaki herhangi biri yönetici komutlarını (/skip, /stop vb.) kullanabilecektir.
+3️⃣ **Yetkili Kullanıcılar** - Bu bölümden yönetici komutlarını herkese veya yalnızca yöneticilere değiştirebilirsiniz. Herkese izin verilirse, gruptaki herhangi biri yönetici komutlarını (/atla, /durdur vb.) kullanabilecektir.
 
 4️⃣ **Temiz Mod** - Etkinleştirildiğinde, botun mesajlarını grubunuzdan 5 dakika sonra siler ve sohbetinizin temiz ve düzenli kalmasını sağlar.
 
-5️⃣ **Komut Temizleme** - Aktifleştirildiğinde, Bot komutlarını (/play, /pause, /shuffle, /stop vb.) hemen siler.
+5️⃣ **Komut Temizleme** - Aktifleştirildiğinde, Bot komutlarını (/oynat, /duraklat, /shuffle, /durdur vb.) hemen siler.
 
 6️⃣ **Oynatma Ayarları**:
 
@@ -102,9 +98,9 @@ HELP_4 = """✅<u>**Ekstra Komutlar:**</u>
 
 <u>**Oynatma ayarları seçenekleri**:</u>
 
-1️⃣ **Arama Modu** [Doğrudan veya İnline] - /play modunda arama modunuzu değiştirir.
+1️⃣ **Arama Modu** [Doğrudan veya İnline] - /oynat modunda arama modunuzu değiştirir.
 
-2️⃣ **Yönetici Komutları** [Herkese veya Yöneticilere] - Eğer herkese izin verilirse, gruptaki herhangi biri yönetici komutlarını (/skip, /stop vb.) kullanabilecektir.
+2️⃣ **Yönetici Komutları** [Herkese veya Yöneticilere] - Eğer herkese izin verilirse, gruptaki herhangi biri yönetici komutlarını (/atla, /durdur vb.) kullanabilecektir.
 
 3️⃣ **Oynatma Türü** [Herkese veya Yöneticilere] - Eğer yöneticilere izin verilirse, sadece gruptaki yöneticiler müzik çalabilirler."""
 

@@ -24,11 +24,11 @@ HELP_1 = """✅**<u>Yönetici Komutları:</u>**
 
 
 ✅<u>**Spesifik Atlama:**</u>
-/skip veya /cskip [Sayı(örnek: 3)]
+/atla veya /cskip [Sayı(örnek: 3)]
 - Müziği belirtilen sıra numarasına atlar. Örnek: /skip 3, müziği üçüncü sıradaki müziğe atlar ve kuyrukta bulunan 1. ve 2. müzikleri görmezden gelir.
 
 ✅<u>**Döngü Oynatma:**</u>
-/loop veya /cloop [enabled/disabled] veya [1-10 arasında sayılar]
+/dongu veya /cloop [enabled/disabled] veya [1-10 arasında sayılar]
 - Etkinleştirildiğinde, bot mevcut çalınan müziği 1-10 kez sesli sohbette tekrarlar. Varsayılan olarak 10 kez tekrarlar.
 
 ✅<u>**Yetkilendirilmiş Kullanıcılar:**</u>

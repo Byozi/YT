@@ -19,7 +19,7 @@ from ..logging import LOGGER
 
 class YukkiBot(Client):
     def __init__(self):
-        LOGGER(__name__).info(f"Starting Bot")
+        LOGGER(__name__).info(f"Bot Başlatılıyor")
         super().__init__(
             "YukkiMusicBot",
             api_id=config.API_ID,
@@ -34,12 +34,12 @@ class YukkiBot(Client):
         self.id = get_me.id
         try:
             await self.send_message(
-                config.LOG_GROUP_ID, "Bot Started"
+                config.LOG_GROUP_ID, "Bot Başladı"
             )
         except:
             LOGGER(__name__).error(
-                "Bot has failed to access the log Group. Make sure that you have added your bot to your log channel and promoted as admin!"
-            )
+    "Bot log grubuna erişemedi. Botunuzu log kanalınıza eklediğinizden ve yönetici olarak atadığınızdan emin olun!"
+)
             sys.exit()
         if config.SET_CMDS == str(True):
             try:
@@ -63,7 +63,7 @@ class YukkiBot(Client):
         a = await self.get_chat_member(config.LOG_GROUP_ID, self.id)
         if a.status != "administrator":
             LOGGER(__name__).error(
-                "Please promote Bot as Admin in Logger Group"
+                "Lütfen Bot'u Log Group'ta Yönetici olarak tanıtın"
             )
             sys.exit()
         if get_me.last_name:

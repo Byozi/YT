@@ -33,8 +33,8 @@ DELETEPLAYLIST_COMMAND : ["deleteplaylist"]
 
 # Tools
 QUEUE_COMMAND : ["queue","cqueue", "player", "cplayer", "playing", "cplaying"]
-SONG_COMMAND : ["song", "video"]
-LYRICS_COMMAND : ["lyrics"]
+SONG_COMMAND : ["sarki", "video"]
+LYRICS_COMMAND : ["soz"]
 
 
 # Admin Commands
@@ -47,7 +47,7 @@ MUTE_COMMAND : ["sustur", "cmute"]
 UNMUTE_COMMAND : ["sesiac", "cunmute"]
 STOP_COMMAND : ["durdur", "end", "cstop", "cend"]
 SKIP_COMMAND : ["atla", "cskip"]
-SHUFFLE_COMMAND : ["shuffle", "cshuffle"]
+SHUFFLE_COMMAND : ["karistir", "cshuffle"]
 LOOP_COMMAND : ["tekrar", "cloop"]
 SEEK_COMMAND : ["seek", "cseek", "seekback", "cseekback"]
 RESTART_COMMAND : ["restart"]

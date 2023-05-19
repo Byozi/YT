@@ -19,7 +19,7 @@ from ..logging import LOGGER
 
 class YukkiBot(Client):
     def __init__(self):
-        LOGGER(__name__).info(f"Bot Başlatılıyor")
+        LOGGER(__name__).info(f"Bot Göreve Çağırılıyor..")
         super().__init__(
             "YukkiMusicBot",
             api_id=config.API_ID,
@@ -34,7 +34,7 @@ class YukkiBot(Client):
         self.id = get_me.id
         try:
             await self.send_message(
-                config.LOG_GROUP_ID, "Bot Başladı"
+                config.LOG_GROUP_ID, "Bot Görevini Yapmak İçin Hazır!"
             )
         except:
             LOGGER(__name__).error(

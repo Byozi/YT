@@ -11,12 +11,12 @@ HELP_1 = """✅**<u>Yönetici Komutları:</u>**
 
 **c** Kanal Komutları İçerir.
 
-/pause veya /cpause - Oynatılan müziği duraklatır.
-/resume veya /cresume - Duraklatılmış müziği devam ettirir.
-/mute veya /cmute - Oynatılan müziği sessize alır.
-/unmute veya /cunmute - Sessiz yapılan müziği geri açar.
-/skip veya /cskip - Şu anda çalınan müziği atlar.
-/stop veya /cstop - Oynatılan müziği durdurur.
+/duraklat veya /cpause - Oynatılan müziği duraklatır.
+/devam veya /cresume - Duraklatılmış müziği devam ettirir.
+/sustur veya /cmute - Oynatılan müziği sessize alır.
+/sesiac veya /cunmute - Sessiz yapılan müziği geri açar.
+/atla veya /cskip - Şu anda çalınan müziği atlar.
+/durdur veya /cstop - Oynatılan müziği durdurur.
 /shuffle veya /cshuffle - Sıradaki çalma listesini rastgele karıştırır.
 /seek veya /cseek - Müziği belirtilen süreye ileri alır.
 /seekback veya /cseekback - Müziği belirtilen süreye geri alır.

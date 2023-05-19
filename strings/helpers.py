@@ -134,22 +134,22 @@ HELP_5 = """🔰**<u>Kurucu & Yönetici Ekleme İşlemleri :</u>**
 /activevideo - Bot üzerindeki etkin video görüşmelerini kontrol edin.
 /stats - Botun İstatistiklerini kontrol edin.
 
-⚠️**<u>BLACKLIST CHAT FUNCTION:</u>**
+⚠️**<u>KARALISTE FONKSIYONU:</u>**
 /blacklistchat [CHAT_ID] - Herhangi bir sohbeti Müzik Botundan engelleyin.
 /whitelistchat [CHAT_ID] - Müzik Botunu kara listeye alınan herhangi bir sohbetten çıkarın.
 /blacklistedchat - Tüm kara listeye alınan sohbetleri kontrol edin.
 
-👤**<u>BLOCKED FUNCTION:</u>**
+👤**<u>YASAKLAMA FONKSIYONU:</u>**
 /block [Username or Reply to a user] - Bir kullanıcının bot komutlarını kullanmasını engeller.
 /unblock [Username or Reply to a user] - Bir kullanıcıyı Bot'un Engellenen Listesinden kaldırır.
 /blockedusers - Engellenen Kullanıcı Listesini kontrol edin.
 
-👤**<u>GBAN FUNCTION:</u>**
+👤**<u>GRUP BAN FONKSIYONU:</u>**
 /gban [Username or Reply to a user] - Bir kullanıcıyı botun hizmet verdiği sohbetten engeller ve botunuzu kullanmasını durdurur.
 /ungban [Username or Reply to a user] - Bir kullanıcıyı Bot'un gbanned Listesinden kaldırır ve kullanıcıya botunuzu kullanma izni verir.
 /gbannedusers - Gbanned Kullanıcı Listesini kontrol edin.
 
-🎥**<u>VIDEOCALLS FUNCTION:</u>**
+🎥**<u>VIDEO ARAMA FONKSIYONU:</u>**
 /set_video_limit [Chats Sayısı] - Bir seferde izin verilen Maksimum Sohbet Sayısını ayarlayın. Varsayılan olarak 3 sohbet.
 /videomode [download|m3u8] - Eğer indirme modu etkinse, Bot videoları M3u8 formatında oynatmak yerine indirecektir. Varsayılan olarak M3u8. M3u8 modunda herhangi bir sorgu oynatılmazsa indirme modunu kullanabilirsiniz.
 

@@ -45,15 +45,15 @@ class YukkiBot(Client):
             try:
                 await self.set_bot_commands(
                     [
-                        BotCommand("ping", "Check that bot is alive or dead"),
-                        BotCommand("play", "Starts playing the requested song"),
-                        BotCommand("skip", "Moves to the next track in queue"),
-                        BotCommand("pause", "Pause the current playing song"),
-                        BotCommand("resume", "Resume the paused song"),
-                        BotCommand("end", "Clear the queue and leave voice chat"),
-                        BotCommand("shuffle", "Randomly shuffles the queued playlist."),
-                        BotCommand("playmode", "Allows you to change the default playmode for your chat"),
-                        BotCommand("settings", "Open the settings of the music bot for your chat.")
+                        BotCommand("ping", "Botun canlı veya ölü olup olmadığını kontrol edin"),
+                        BotCommand("play", "İstenen şarkıyı çalmaya başlar"),
+                        BotCommand("skip", "Sıradaki bir sonraki parçaya gider"),
+                        BotCommand("pause", "Çalmakta olan şarkıyı duraklat"),
+                        BotCommand("resume", "Duraklatılan şarkıyı devam ettir"),
+                        BotCommand("end", "Sırayı boşaltın ve sesli sohbetten çıkın"),
+                        BotCommand("shuffle", "Sıraya alınmış çalma listesini rastgele karıştırır."),
+                        BotCommand("playmode", "Sohbetiniz için varsayılan oynatma modunu değiştirmenize izin verir"),
+                        BotCommand("settings", "Sohbetiniz için müzik botunun ayarlarını açın.")
                         ]
                     )
             except:

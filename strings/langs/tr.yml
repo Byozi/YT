@@ -58,7 +58,7 @@ admin_20 : "Yönetici önbelleği başarıyla yeniden yüklendi."
 admin_21 : "Sırada karıştırılacak bir şey yok"
 admin_22 : "Karıştırılamadı.\n\nSırayı kontrol edin: /queue"
 admin_23 : "**Sıra Karıştırıldı: {0}**\n\nKarıştırılan sırayı kontrol edin: /queue"
-admin_24 : "**Kullanım:**\n/loop [enable/disable] veya [1-10 arası sayı]\n\n**Örnek:** /loop 5"
+admin_24 : "**Kullanım:**\n/dongu [1-10 arası sayı]\n\n**Örnek:** /dongu 5"
 admin_25 : "Döngü, {0} tarafından **{1}** kez etkinleştirildi. Bot şimdi sesli sohbette çalmakta olan müziği **{1}** kez tekrarlayacak"
 admin_26 : "Döngü oynatma için lütfen 1-10 arasındaki sayıları kullanın"
 admin_27 : "Döngü Oynatma devre dışı bırakıldı"
@@ -151,7 +151,7 @@ play_16 : "Parça ayrıntıları getirilemedi. başka şarkı dene."
 
 
 #Playlist
-playlist_1 : "**Kullanım:** /play [Müzik Adı veya Youtube Bağlantısı veya Sesi Yanıtla]\n\nBot'un Sunucu Oynatma Listesini oynatmak istiyorsanız! Aşağıdaki butona basın."
+playlist_1 : "**Kullanım:** /oynat [Müzik Adı veya Youtube Bağlantısı veya Sesi Yanıtla]\n\nBot'un Sunucu Oynatma Listesini oynatmak istiyorsanız! Aşağıdaki butona basın."
 playlist_2 : "Çalma listeniz alınıyor. Lütfen bekleyin"
 playlist_3 : "Bot Sunucusunda oynatma listeniz yok."
 playlist_4 : "Getirilen Oynatma Listesit:\n\n"
@@ -188,7 +188,7 @@ tracks_2 : "**Hata**\n\nBot'un sunucularında **{0} En İyi 10 Oynatma Listesi**
 # TOOLS
 
 #Lyrics
-lyrics_1 : "**Kullanım:**\n\n/lyrics [ Şarkı ADı]"
+lyrics_1 : "**Kullanım:**\n\n/soz [ Şarkı Adı], Örnek /soz Aleyna Tilki - Yanlız çiçek"
 lyrics_2 : "Şarkı Sözleri Arama"
 lyrics_3 : "❌ Şarkı sözleri getirilemedi😭.\n\n💡**Aramaya çalışıldı:** {0}"
 lyrics_5 : 
@@ -402,8 +402,8 @@ heroku_14 : "Git Command Error"
 heroku_15 : "Invalid Git Repsitory"
 
 #Private bot mode
-pbot_1 : "**Kullanım:**\n/authorize [CHAT_ID]"
-pbot_2 :  "**Kullanım:**\n/unauthorize [CHAT_ID]"
+pbot_1 : "**Kullanım:**\n/yetkilendir [CHAT_ID]"
+pbot_2 :  "**Kullanım:**\n/yetkial [CHAT_ID]"
 pbot_3 : "Yetkili listeye verilen sohbet eklendi"
 pbot_4 : "Verilen sohbet yetkili listeden kaldırıldı"
 pbot_5 : "Sohbet zaten yetkili listede"

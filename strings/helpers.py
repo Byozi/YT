@@ -9,7 +9,7 @@
 
 HELP_1 = """❌Sadece Gruptaki Adminler İçin Komutlar:❌**
 
-Bu komutları grubunuzun içerisinde kullanmanız için tasarladık. Bot panelinde kullnılacak komutlar diğer menüdedir.
+Bu komutları grubunuzun içerisinde kullanmanız için tasarladık. Bot panelinde kullanılacak komutlar diğer menüdedir.
 
 👉🏻 /start - Botu başlatır.
 👉🏻 /duraklat - Oynatılan müziği duraklatır.

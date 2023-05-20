@@ -12,16 +12,16 @@
 
 # Bot Commands
 PING_COMMAND : ["ping"]
-START_COMMAND : ["start"]
-HELP_COMMAND : ["yardim"]
-SETTINGS_COMMAND : ["ayarlar", "setting"]
-RELOAD_COMMAND : ["admincache", "reload"]
+START_COMMAND : ["start", "baslat"]
+HELP_COMMAND : ["yardim", "help"]
+SETTINGS_COMMAND : ["ayarlar", "setting", "settings"]
+RELOAD_COMMAND : ["admincache", "reload", "yenile"]
 GSTATS_COMMAND : ["gstats"]
 STATS_COMMAND : ["stats"]
-LANGUAGE_COMMAND : ["lang", "language", "langs"]
+LANGUAGE_COMMAND : ["lang", "language", "langs", "dil"]
 
 # Play Commands
-PLAY_COMMAND : ["oynat", "voynat", "cplay", "cvplay", "playforce", "vplayforce", "cplayforce", "cvplayforce"]
+PLAY_COMMAND : ["oynat", "play" "voynat", "cplay", "cvplay", "playforce", "vplayforce", "cplayforce", "cvplayforce"]
 PLAYMODE_COMMAND : ["playmode"]
 CHANNELPLAY_COMMAND : ["channelplay"]
 STREAM_COMMAND : ["stream", "cstream", "streamforce"]
@@ -33,7 +33,7 @@ DELETEPLAYLIST_COMMAND : ["deleteplaylist"]
 
 # Tools
 QUEUE_COMMAND : ["queue","cqueue", "player", "cplayer", "playing", "cplaying"]
-SONG_COMMAND : ["sarki", "video"]
+SONG_COMMAND : ["indir", "video"]
 LYRICS_COMMAND : ["soz"]
 
 
@@ -45,11 +45,11 @@ PAUSE_COMMAND : ["duraklat", "cpause"]
 RESUME_COMMAND : ["devam", "cresume"]
 MUTE_COMMAND : ["sustur", "cmute"]
 UNMUTE_COMMAND : ["sesiac", "cunmute"]
-STOP_COMMAND : ["durdur", "end", "cstop", "cend"]
-SKIP_COMMAND : ["atla", "cskip"]
-SHUFFLE_COMMAND : ["karistir", "cshuffle"]
-LOOP_COMMAND : ["tekrar", "cloop"]
-SEEK_COMMAND : ["seek", "cseek", "seekback", "cseekback"]
+STOP_COMMAND : ["durdur", "stop", "bitir", "end", "cstop", "cend"]
+SKIP_COMMAND : ["atla", "skip", "cskip"]
+SHUFFLE_COMMAND : ["karistir", "mix" "cshuffle"]
+LOOP_COMMAND : ["tekrar", "dongu", "loop", "cloop"]
+SEEK_COMMAND : ["ileri", "cseek", "gerial", "cseekback"]
 RESTART_COMMAND : ["restart"]
 
 # Sudo Users Commaands

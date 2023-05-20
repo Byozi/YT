@@ -35,7 +35,7 @@ HELP_2 = """❌<u>**Oynatma Komutları:**</u>❌
 👉 /voynat - Video Oynatır.
 👉 /voynat komutu aynı zamanda canlı yayınıda destekler.(örnek: /vplay ATV Canlı)
 👉 /voynathemen - Sesli sohbette çalınan video yayınını durdurur ve sırayı bozmadan temizlemeden aranan videoyu anında çalmaya başlar.
-👉 /komutlar - Bu komutu Grubunuzda yazarak komutları görebilirsiniz.
+👉 /yardim - Bu komutu Grubunuzda yazarak komutları görebilirsiniz.
 
  **<u>Bot'un Sunucu Çalma Listeleri:</u>**
 👉 /oynatmalistesi - Sunuculardaki kaydedilmiş çalma listelerinizi kontrol eder.

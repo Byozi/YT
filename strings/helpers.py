@@ -7,103 +7,58 @@
 #
 # All rights reserved.
 
-HELP_1 = """✅**<u>Yönetici Komutları:</u>**
+HELP_1 = """❌Sadece Gruptaki Adminler İçin Komutlar:❌**
 
-**c** Kanal Komutları İçerir.
+Bu komutları grubunuzun içerisinde kullanmanız için tasarladık. Bot panelinde kullnılacak komutlar diğer menüdedir.
 
-/duraklat - Oynatılan müziği duraklatır.
-/devam  - Duraklatılmış müziği devam ettirir.
-/sustur - Oynatılan müziği sessize alır.
-/sesiac - Sessiz yapılan müziği geri açar.
-/atla  - Şu anda çalınan müziği atlar.
-/durdur  - Oynatılan müziği durdurur.
-/karistir - Sıradaki çalma listesini rastgele karıştırır.
-/seek - Müziği belirtilen süreye ileri alır.
-/seekback - Müziği belirtilen süreye geri alır.
-/restart - Sohbetiniz için botu yeniden başlatır.
+👉🏻 /start - Botu başlatır.
+👉🏻 /duraklat - Oynatılan müziği duraklatır.
+👉🏻 /devam  - Duraklatılmış müziği devam ettirir.
+👉🏻 /sustur - Oynatılan müziği sessize alır.
+👉🏻 /sesiac - Sessiz yapılan müziği geri açar.
+👉🏻 /atla  - Şu anda çalınan müziği atlar.
+👉🏻 /son  - Oynatılan müziği sonlandırır ve yayını kapatır.
+👉🏻 /karistir - Sıradaki çalma listesini rastgele karıştırır.
+👉🏻 /ilerisar - Müziği belirtilen süreye ileri alır.
+👉🏻 /gerisar - Müziği belirtilen süreye geri alır.
+👉🏻 /atla - Müziği belirtilen sıra numarasına atlar. Örnek: /atla 3, müziği üçüncü sıradaki müziğe atlamasını sağlar.
+👉🏻 /dongu - Etkinleştirildiğinde, bot mevcut çalınan müziği 1-10 kez sesli sohbette tekrarlar. Örnek : /dongu 5 bu komut 5 kere tekrar açar.
+👉🏻 /yetkiver [Kullanıcı Adı] - Bir kullanıcıyı grubun yetkilendirme listesine ekler.
+👉🏻 /yetkial [Kullanıcı Adı] - Bir kullanıcıyı gruptan yetkilendirme listesinden kaldırır.
+👉🏻 /yetkililer - Grubun yetkilendirme listesini kontrol eder."""
 
+HELP_2 = """❌<u>**Oynatma Komutları:**</u>❌
 
-✅<u>**Spesifik Atlama:**</u>
-/atla [Sayı(örnek: 3)]
-- Müziği belirtilen sıra numarasına atlar. Örnek: /atla 3, müziği üçüncü sıradaki müziğe atlar ve kuyrukta bulunan 1. ve 2. müzikleri görmezden gelir.
+👉 /oynat - Şarkı oynatır.
+👉 /oynat komutu aynı zamanda canlı yayında destekler.(örnek: /oynat KralFm canlı)
+👉 /oynathemen - Sesli sohbette çalınan parçayı durdurur ve sırayı bozmadan temizlemeden aranan parçayı anında çalmaya başlar.
+👉 /voynat - Video Oynatır.
+👉 /voynat komutu aynı zamanda canlı yayınıda destekler.(örnek: /vplay ATV Canlı)
+👉 /voynathemen - Sesli sohbette çalınan video yayınını durdurur ve sırayı bozmadan temizlemeden aranan videoyu anında çalmaya başlar.
+👉 /komutlar - Bu komutu Grubunuzda yazarak komutları görebilirsiniz.
 
-✅<u>**Döngü Oynatma:**</u>
-/dongu  [enabled/disabled] veya [1-10 arasında sayılar]
-- Etkinleştirildiğinde, bot mevcut çalınan müziği 1-10 kez sesli sohbette tekrarlar. Varsayılan olarak 10 kez tekrarlar.
-
-✅<u>**Yetkilendirilmiş Kullanıcılar:**</u>
-Yetkili kullanıcılar, sohbetinizde yönetici hakları olmadan yönetici komutlarını kullanabilir.
-
-/auth [Kullanıcı Adı] - Bir kullanıcıyı grubun yetkilendirme listesine ekler.
-/unauth [Kullanıcı Adı] - Bir kullanıcıyı gruptan yetkilendirme listesinden kaldırır.
-/authusers - Grubun yetkilendirme listesini kontrol eder."""
-
-HELP_2 = """✅<u>**Oynatma Komutları:**</u>
-
-Mevcut Komutlar = /oynat , /voynat , /cplay
-
-ForcePlay Komutları = /playforce , /vplayforce , /cplayforce
-
-c, kanal oynatması anlamına gelir.
-v, video oynatması anlamına gelir.
-force, zorla oynatma anlamına gelir.
-
-/oynat veya /voynat veya /cplay - Bot, verdiğiniz sorguyu sesli sohbette oynatmaya başlar veya sesli sohbetlerde canlı bağlantıları akıtır.
-
-/playforce veya /vplayforce veya /cplayforce - Force Play, sesli sohbette çalınan mevcut müziği durdurur ve aranan müziği sırayı bozmadan hemen çalmaya başlar.
-
-/channelplay [Sohbet kullanıcı adı veya id] veya [Devre dışı] - Kanalı bir gruba bağlar ve grup sesli sohbetinde kanalın müziğini akıtır.
-
-✅**<u>Bot'un Sunucu Çalma Listeleri:</u>**
-/oynatmalistesi - Sunuculardaki kaydedilmiş çalma listelerinizi kontrol eder.
-/deleteplaylist - Çalma listenizdeki herhangi bir kayıtlı müziği siler.
-/oynay - Sunuculardan Kaydedilmiş Çalma Listesini Çalmaya Başlar."""
+ **<u>Bot'un Sunucu Çalma Listeleri:</u>**
+👉 /oynatmalistesi - Sunuculardaki kaydedilmiş çalma listelerinizi kontrol eder.
+👉 /oltemizle - Çalma listenizdeki herhangi bir kayıtlı müziği siler.
+👉 /oynat - Sunuculardan Kaydedilmiş Çalma Listesini Çalmaya Başlar."""
 
 
-HELP_3 = """✅<u>**Bot Komutları:**</u>
+HELP_3 = """❌<u>**Bot Komutları:**</u>❌
 
-/soz [Müzik İsmi] - Belirli bir müziğin sözlerini web üzerinde arar.
+Bu komutları sadece botun özeline yazınız. Farklı komutlar için bir önceki menüyü kontrol ediniz..
 
-/sarki [Şarkı İsmi] veya [YT Linki] - Youtube'dan mp3 veya mp4 formatında herhangi bir şarkıyı indirir.
+👉 /soz [Müzik İsmi] - Belirli bir müziğin sözlerini web üzerinde arar.
+👉 /indir [Şarkı İsmi] veya [YT Linki] - Youtube'dan mp3 veya mp4 formatında herhangi bir şarkıyı indirir.
+👉 /player - Etkileşimli Bir Oynatma Paneli Alır. """
 
-/player - Etkileşimli Bir Oynatma Paneli Alır.
+HELP_4 = """❌<u>**Ekstra Komutlar:**</u>❌
 
-**c** kanal çalması anlamına gelir.
+ Burada bulunan komutlar genel bot komutlarıdır. 
 
-/queue veya /cqueue - Müzik Sırasını Kontrol Eder."""
-
-HELP_4 = """✅<u>**Ekstra Komutlar:**</u>
-/start - Müzik Botunu Başlatır.
-/yardim - Komutların detaylı açıklamalarını içeren Yardım Menüsünü alır.
-/ping- Bot'a ping atar ve Bot'un Ram, Cpu vb. istatistiklerini kontrol eder.
-
-✅<u>Grup Ayarları:</u>
-/ayarlar - Grubun tüm ayarlarını içeren düğmelerle birlikte tam bir ayar paneli alır.
-
-🔗 **Ayarlar seçenekleri**:
-
-1️⃣ **Ses Kalitesi** - Sesli sohbette yayınlamak istediğiniz ses kalitesini ayarlayabilirsiniz.
-
-2️⃣ **Video Kalitesi** - Sesli sohbette yayınlamak istediğiniz video kalitesini ayarlayabilirsiniz.
-
-3️⃣ **Yetkili Kullanıcılar** - Bu bölümden yönetici komutlarını herkese veya yalnızca yöneticilere değiştirebilirsiniz. Herkese izin verilirse, gruptaki herhangi biri yönetici komutlarını (/atla, /durdur vb.) kullanabilecektir.
-
-4️⃣ **Temiz Mod** - Etkinleştirildiğinde, botun mesajlarını grubunuzdan 5 dakika sonra siler ve sohbetinizin temiz ve düzenli kalmasını sağlar.
-
-5️⃣ **Komut Temizleme** - Aktifleştirildiğinde, Bot komutlarını (/oynat, /duraklat, /shuffle, /durdur vb.) hemen siler.
-
-6️⃣ **Oynatma Ayarları**:
-
-**/playmode** - Grubunuzun oynatma ayarlarını belirleyebileceğiniz düğmelerle birlikte tam bir oynatma ayarları paneli alırsınız.
-
-<u>**Oynatma ayarları seçenekleri**:</u>
-
-1️⃣ **Arama Modu** [Doğrudan veya İnline] - /oynat modunda arama modunuzu değiştirir.
-
-2️⃣ **Yönetici Komutları** [Herkese veya Yöneticilere] - Eğer herkese izin verilirse, gruptaki herhangi biri yönetici komutlarını (/atla, /durdur vb.) kullanabilecektir.
-
-3️⃣ **Oynatma Türü** [Herkese veya Yöneticilere] - Eğer yöneticilere izin verilirse, sadece gruptaki yöneticiler müzik çalabilirler."""
-
+👉/start : Botun Başlatma Panelini Gösterir. 
+👉/settings ve ya /ayarlar : Ayarlar Menüsüne Ulaşabilirsiniz.
+👉/yardim : Botun Yardım Menüsüne Ulaşırsınız. """
+  
 HELP_5 = """🔰**<u>Kurucu & Yönetici Ekleme İşlemleri :</u>**
 /addsudo [Kullanıcı Adı veya Bir kullanıcıya yanıt verin]
 /delsudo [Kullanıcı Adı veya Bir kullanıcıya yanıt verin]

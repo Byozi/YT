@@ -55,7 +55,7 @@ async def start_comm(client, message: Message, _):
             return await message.reply_text(_["song_2"])
         if name[0:3] == "sta":
             m = await message.reply_text(
-                "🔎 Fetching your personal stats.!"
+                "🔎 Veriler toplanıyor, bekleyiniz.."
             )
             stats = await get_userss(message.from_user.id)
             tot = len(stats)
@@ -131,7 +131,7 @@ async def start_comm(client, message: Message, _):
         if name[0:3] == "del":
             await del_plist_msg(client=client, message=message, _=_)
         if name[0:3] == "inf":
-            m = await message.reply_text("🔎 Fetching Info!")
+            m = await message.reply_text("🔎 Veriler toplanıyor, bekleyiniz..")
             query = (str(name)).replace("info_", "", 1)
             query = f"https://www.youtube.com/watch?v={query}"
             results = VideosSearch(query, limit=1)
@@ -147,26 +147,26 @@ async def start_comm(client, message: Message, _):
                 link = result["link"]
                 published = result["publishedTime"]
             searched_text = f"""
-🔍__**Video Track Information**__
+🔍__**İsteğiniz üzerine getirilen bilgiler**__
 
-❇️**Title:** {title}
+❇️**Başlık/Şarkı adı:** {title}
 
-⏳**Duration:** {duration} Mins
-👀**Views:** `{views}`
-⏰**Published Time:** {published}
-🎥**Channel Name:** {channel}
-📎**Channel Link:** [Visit From Here]({channellink})
-🔗**Video Link:** [Link]({link})
+⏳**Süre:** {duration} Mins
+👀**İzlenme:** `{views}`
+⏰**Yayınlanma Tarihi:** {published}
+🎥**Kanal Adı:** {channel}
+📎**Kanal Linki:** [Visit From Here]({channellink})
+🔗**Video Linki:** [Link]({link})
 
-⚡️ __Searched Powered By {config.MUSIC_BOT_NAME}__"""
+⚡️ __Arama gücünü {config.MUSIC_BOT_NAME} almaktadır.__"""
             key = InlineKeyboardMarkup(
                 [
                     [
                         InlineKeyboardButton(
-                            text="🎥 Watch ", url=f"{link}"
+                            text="🎥 Direkt İzle ", url=f"{link}"
                         ),
                         InlineKeyboardButton(
-                            text="🔄 Close", callback_data="close"
+                            text="🔄 Burayı Kapat", callback_data="close"
                         ),
                     ],
                 ]

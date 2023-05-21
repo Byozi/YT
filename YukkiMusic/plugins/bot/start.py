@@ -55,7 +55,7 @@ async def start_comm(client, message: Message, _):
             return await message.reply_text(_["song_2"])
         if name[0:3] == "sta":
             m = await message.reply_text(
-                "🔎 Fetching your personal stats.!"
+                "🔎 Verileri getiriliyor, bekleyiniz..."
             )
             stats = await get_userss(message.from_user.id)
             tot = len(stats)
@@ -147,26 +147,26 @@ async def start_comm(client, message: Message, _):
                 link = result["link"]
                 published = result["publishedTime"]
             searched_text = f"""
-🔍__**Video Track Information**__
+🔍__**Şarkı Bilgisi Aşağıdadır**__
 
-❇️**Title:** {title}
+❇️**Başlık/Şarkı Adı:** {title}
 
-⏳**Duration:** {duration} Mins
-👀**Views:** `{views}`
-⏰**Published Time:** {published}
-🎥**Channel Name:** {channel}
-📎**Channel Link:** [Visit From Here]({channellink})
-🔗**Video Link:** [Link]({link})
+⏳**Süre:** {duration} Mins
+👀**İzlenme:** `{views}`
+⏰**Paylaşıldığı Tarih:** {published}
+🎥**Kanal Adı:** {channel}
+📎**Kanal Linki:** [Visit From Here]({channellink})
+🔗**Video Linki:** [Link]({link})
 
-⚡️ __Searched Powered By {config.MUSIC_BOT_NAME}__"""
+⚡️ __Süper arama gücü için {config.MUSIC_BOT_NAME}__ teşekkürler."""
             key = InlineKeyboardMarkup(
                 [
                     [
                         InlineKeyboardButton(
-                            text="🎥 Watch ", url=f"{link}"
+                            text="🎥 İzle ", url=f"{link}"
                         ),
                         InlineKeyboardButton(
-                            text="🔄 Close", callback_data="close"
+                            text="🔄 Kapat", callback_data="close"
                         ),
                     ],
                 ]

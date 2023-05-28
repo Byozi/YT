@@ -29,3 +29,41 @@ Press I button on keyboard to start editing.
 Press Ctrl + C  once you are done with editing vars and type :wq to save .env or :qa to exit editing.
 9. Finally Run Yukki Music Bot
 bash start
+
+
+Problems : 
+
+Pygram old version : pip3 install -U pyrogram==1.4.16  
+screen : sudo apt install screen -y
+
+screen
+
+bash start
+tmux : apt install tmux -y
+
+tmux
+
+bash start
+
+Ctrl+b then d
+HOW TO UPDATE NODEJS IN UBUNTO
+
+1)sudo apt update && sudo apt upgrade
+
+2)curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.38.0/install.sh | bash
+
+3)source ~/.bashrc
+
+4)nvm install v18
+
+
+If you run into "database is locked" error, it means the database is being accessed by multiple connections (i.e the previous python process is still trying to access the database even though you tried to kill it with CTRL + Z).  SQLite database is locked until that transaction is committed.
+
+To fix, run the following command in the terminal:
+
+sudo pkill -9 python3
+
+Once done, start the bot again with
+
+bash start
+

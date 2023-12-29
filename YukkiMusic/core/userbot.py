@@ -21,7 +21,7 @@ assistantids = []
 
 class Userbot(Client):
     def __init__(self):
-        super().__init__(
+        self.one = Client(
             api_id=config.API_ID,
             api_hash=config.API_HASH,
             session_name=str(config.STRING1),

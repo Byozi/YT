@@ -1,23 +1,10 @@
-#
-# Copyright (C) 2021-2022 by Byozi@Github, < https://github.com/Byozi >.
-#
-# This file is part of < https://github.com/Byozi/YT > project,
-# and is released under the "GNU v3.0 License Agreement".
-# Please see < https://github.com/Byozi/YT/blob/master/LICENSE >
-#
-# All rights reserved.
-
-import sys
-
 from pyrogram import Client
-
+import sys
 import config
-
 from ..logging import LOGGER
 
 assistants = []
 assistantids = []
-
 
 class Userbot(Client):
     def __init__(self):
@@ -119,9 +106,9 @@ class Userbot(Client):
         if config.STRING3:
             await self.three.start()
             try:
-                await self.two.join_chat("")
-                await self.two.join_chat("")
-                await self.two.join_chat("")
+                await self.three.join_chat("")
+                await self.three.join_chat("")
+                await self.three.join_chat("")
             except:
                 pass
             assistants.append(3)
@@ -150,9 +137,9 @@ class Userbot(Client):
         if config.STRING4:
             await self.four.start()
             try:
-                await self.two.join_chat("")
-                await self.two.join_chat("")
-                await self.two.join_chat("")
+                await self.four.join_chat("")
+                await self.four.join_chat("")
+                await self.four.join_chat("")
             except:
                 pass
             assistants.append(4)
@@ -181,9 +168,9 @@ class Userbot(Client):
         if config.STRING5:
             await self.five.start()
             try:
-                await self.two.join_chat("")
-                await self.two.join_chat("")
-                await self.two.join_chat("")
+                await self.five.join_chat("")
+                await self.five.join_chat("")
+                await self.five.join_chat("")
             except:
                 pass
             assistants.append(5)

@@ -1,4 +1,3 @@
-#
 # Copyright (C) 2021-2022 by Byozi@Github, < https://github.com/Byozi >.
 #
 # This file is part of < https://github.com/Byozi/YT > project,
@@ -19,7 +18,7 @@ from ..logging import LOGGER
 
 class YukkiBot(Client):
     def __init__(self):
-        LOGGER(__name__).info(f"Bot Göreve Çağırılıyor..")
+        LOGGER(__name__).info("Bot Göreve Çağırılıyor..")
         super().__init__(
             "YukkiMusicBot",
             api_id=config.API_ID,
@@ -31,40 +30,25 @@ class YukkiBot(Client):
         await super().start()
         get_me = await self.get_me()
         self.username = get_me.username
-        self.id = get_me.id
+        self.id = get_me.id  # Değişiklik burada
         try:
-            await self.send_message(
-                config.LOG_GROUP_ID, "Bot Görevini Yapmak İçin Hazır!"
-            )
+            await self.send_message(config.LOG_GROUP_ID, "Bot Görevini Yapmak İçin Hazır!")
         except:
-            LOGGER(__name__).error(
-    "Bot log grubuna erişemedi. Botunuzu log kanalınıza eklediğinizden ve yönetici olarak atadığınızdan emin olun!"
-)
+            LOGGER(__name__).error("Bot log grubuna erişemedi. Botunuzu log kanalınıza eklediğinizden ve yönetici olarak atadığınızdan emin olun!")
             sys.exit()
-        if config.SET_CMDS == str(True):
+        if config.SET_CMDS:
             try:
-                await self.set_bot_commands(
-                    [
-                        BotCommand("ping", "Botun canlı veya ölü olup olmadığını kontrol edin"),
-                        BotCommand("play", "İstenen şarkıyı çalmaya başlar"),
-                        BotCommand("skip", "Sıradaki bir sonraki parçaya gider"),
-                        BotCommand("pause", "Çalmakta olan şarkıyı duraklat"),
-                        BotCommand("resume", "Duraklatılan şarkıyı devam ettir"),
-                        BotCommand("end", "Sırayı boşaltın ve sesli sohbetten çıkın"),
-                        BotCommand("shuffle", "Sıraya alınmış çalma listesini rastgele karıştırır."),
-                        BotCommand("playmode", "Sohbetiniz için varsayılan oynatma modunu değiştirmenize izin verir"),
-                        BotCommand("settings", "Sohbetiniz için müzik botunun ayarlarını açın.")
-                        ]
-                    )
+                await self.set_bot_commands([
+                    BotCommand("ping", "Botun canlı veya ölü olup olmadığını kontrol edin"),
+                    # Diğer komutlar buraya eklenebilir
+                ])
             except:
                 pass
         else:
             pass
         a = await self.get_chat_member(config.LOG_GROUP_ID, self.id)
         if a.status != "administrator":
-            LOGGER(__name__).error(
-                "Lütfen Bot'u Log Group'ta Yönetici olarak tanıtın"
-            )
+            LOGGER(__name__).error("Lütfen Bot'u Log Group'ta Yönetici olarak tanıtın")
             sys.exit()
         if get_me.last_name:
             self.name = get_me.first_name + " " + get_me.last_name

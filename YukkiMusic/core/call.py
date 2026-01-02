@@ -1,4 +1,4 @@
-# Copyright (C) 2021-2022 by Byozi@Github, < https://github.com/Byozi >.
+# Copyright (C) 2021-2022 by Byozi@Github, < https://github.com/Byozi/YT >.
 # This file is part of < https://github.com/Byozi/YT > project,
 # and is released under the "GNU v3.0 License Agreement".
 # Please see < https://github.com/Byozi/YT/blob/master/LICENSE >
@@ -14,7 +14,7 @@ from pyrogram.errors import UserAlreadyParticipant, UserNotParticipant
 from pyrogram.types import InlineKeyboardMarkup
 
 from pytgcalls import PyTgCalls
-from pytgcalls.exceptions import AlreadyJoinedError, NoActiveGroupCall, TelegramServerError
+from pytgcalls.exceptions import NoActiveGroupCall, TelegramServerError
 from pytgcalls.types.input_stream import AudioPiped, AudioVideoPiped
 from pytgcalls.types.stream import StreamAudioEnded
 from pytgcalls.types import Update, JoinedGroupCallParticipant, LeftGroupCallParticipant
@@ -235,19 +235,20 @@ class Call:
                     "Eğer zaten etkinse, lütfen sonlandırın ve tekrar yeni bir sesli sohbet başlatın. "
                     "Sorun devam ederse, /restart komutunu deneyin."
                 ) from e
-        except AlreadyJoinedError:
-            raise AssistantErr(
-                "**Asistan Zaten Sesli Sohbette**\n\n"
-                "Sistemler, asistanın zaten sesli sohbette olduğunu tespit etti. "
-                "Eğer asistan sesli sohbette değilse, lütfen sesli sohbeti sonlandırın ve tekrar başlatın. "
-                "Sorun devam ederse, /restart komutunu deneyin."
-            )
-        except TelegramServerError:
-            raise AssistantErr(
-                "**Telegram Sunucu Hatası**\n\n"
-                "Telegram tarafında geçici bir hata oluştu. Lütfen tekrar deneyin.\n\n"
-                "Sorun devam ederse, sesli sohbeti kapatıp tekrar başlatın."
-            )
+        except Exception as e:
+            if "GROUPCALL_ALREADY_STARTED" in str(e):
+                raise AssistantErr(
+                    "**Asistan Zaten Sesli Sohbette**\n\n"
+                    "Sesli sohbet zaten aktif görünüyor. "
+                    "Lütfen sohbeti kapatıp tekrar başlatın."
+                )
+            if isinstance(e, TelegramServerError):
+                raise AssistantErr(
+                    "**Telegram Sunucu Hatası**\n\n"
+                    "Telegram tarafında geçici bir hata oluştu. Lütfen tekrar deneyin.\n\n"
+                    "Sorun devam ederse, sesli sohbeti kapatıp tekrar başlatın."
+                )
+            raise
         await add_active_chat(chat_id)
         await mute_off(chat_id)
         await music_on(chat_id)
@@ -255,7 +256,6 @@ class Call:
             await add_active_video_chat(chat_id)
         if await is_autoend():
             counter[chat_id] = {}
-            # Not: get_participants çoğu forkta kaldırıldı, bu yüzden sadece join anında 1 kişi varsa timer başlatıyoruz
             autoend[chat_id] = datetime.now() + timedelta(minutes=AUTO_END_TIME)
 
     async def change_stream(self, client, chat_id):
@@ -499,7 +499,7 @@ class Call:
             chat_id = update.chat_id
             users = counter.get(chat_id)
             if users is None:
-                counter[chat_id] = 1  # Varsayılan olarak asistan zaten içinde
+                counter[chat_id] = 1
                 autoend[chat_id] = datetime.now() + timedelta(minutes=AUTO_END_TIME)
                 return
             final = users + 1 if isinstance(update, JoinedGroupCallParticipant) else users - 1

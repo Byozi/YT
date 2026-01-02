@@ -188,11 +188,10 @@ class Call(PyTgCalls):
 
     async def stream_call(self, link):
         assistant = await group_assistant(self, config.LOG_GROUP_ID)
-        await assistant.join_group_call(
-            config.LOG_GROUP_ID,
-            AudioVideoPiped(link),
-            stream_type=StreamType().pulse_stream,
-        )
+       await assistant.join_group_call(
+    config.LOG_GROUP_ID,
+    AudioVideoPiped(link),
+)
         await asyncio.sleep(0.5)
         await assistant.leave_group_call(config.LOG_GROUP_ID)
 
@@ -278,21 +277,19 @@ class Call(PyTgCalls):
         )
         try:
             await assistant.join_group_call(
-                chat_id,
-                stream,
-                stream_type=StreamType().pulse_stream,
-            )
+    chat_id,
+    stream,
+)
         except NoActiveGroupCall:
             try:
                 await self.join_assistant(original_chat_id, chat_id)
             except Exception as e:
                 raise e
             try:
-                await assistant.join_group_call(
-                    chat_id,
-                    stream,
-                    stream_type=StreamType().pulse_stream,
-                )
+               await assistant.join_group_call(
+    chat_id,
+    stream,
+)
             except Exception as e:
                 raise AssistantErr(
              "**Aktif Sesli Sohbet Bulunamadı**\n\nLütfen grubun sesli sohbetinin etkin olduğundan emin olun. Eğer zaten etkinse, lütfen sonlandırın ve tekrar yeni bir sesli sohbet başlatın. Sorun devam ederse, /restart komutunu deneyin."

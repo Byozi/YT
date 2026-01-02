@@ -258,7 +258,7 @@ class Call(PyTgCalls):
                 except Exception as e:
                     raise AssistantErr(_["call_3"].format(e))
 
-    async def join_call(
+       async def join_call(
         self,
         chat_id: int,
         original_chat_id: int,
@@ -268,6 +268,7 @@ class Call(PyTgCalls):
         assistant = await group_assistant(self, chat_id)
         audio_stream_quality = await get_audio_bitrate(chat_id)
         video_stream_quality = await get_video_bitrate(chat_id)
+
         stream = (
             AudioVideoPiped(
                 link,
@@ -276,38 +277,51 @@ class Call(PyTgCalls):
             )
             if video
             else AudioPiped(
-                link, audio_parameters=audio_stream_quality
+                link,
+                audio_parameters=audio_stream_quality,
             )
         )
+
         try:
-    await assistant.join_group_call(
-        chat_id,
-        stream,
-    )
+            await assistant.join_group_call(
+                chat_id,
+                stream,
+            )
 
         except NoActiveGroupCall:
             try:
                 await self.join_assistant(original_chat_id, chat_id)
             except Exception as e:
                 raise e
-            try:
-    await assistant.join_group_call(
-        chat_id,
-        stream,
-    )
 
-            except Exception as e:
-                raise AssistantErr(
-             "**Aktif Sesli Sohbet Bulunamadı**\n\nLütfen grubun sesli sohbetinin etkin olduğundan emin olun. Eğer zaten etkinse, lütfen sonlandırın ve tekrar yeni bir sesli sohbet başlatın. Sorun devam ederse, /restart komutunu deneyin."
+            try:
+                await assistant.join_group_call(
+                    chat_id,
+                    stream,
                 )
+            except Exception:
+                raise AssistantErr(
+                    "**Aktif Sesli Sohbet Bulunamadı**\n\n"
+                    "Lütfen grubun sesli sohbetinin etkin olduğundan emin olun. "
+                    "Eğer zaten etkinse, lütfen sonlandırın ve tekrar yeni bir sesli sohbet başlatın. "
+                    "Sorun devam ederse, /restart komutunu deneyin."
+                )
+
         except AlreadyJoinedError:
             raise AssistantErr(
-    "**Asistan Zaten Sesli Sohbette**\n\nSistemler, asistanın zaten sesli sohbette olduğunu tespit etti, bu sorun genellikle aynı anda 2 sorgu çaldığında ortaya çıkar.\n\nEğer asistan sesli sohbette değilse, lütfen sesli sohbeti sonlandırın ve tekrar yeni bir sesli sohbet başlatın. Sorun devam ederse, /restart komutunu deneyin."
-)
+                "**Asistan Zaten Sesli Sohbette**\n\n"
+                "Sistemler, asistanın zaten sesli sohbette olduğunu tespit etti. "
+                "Eğer asistan sesli sohbette değilse, lütfen sesli sohbeti sonlandırın ve tekrar başlatın. "
+                "Sorun devam ederse, /restart komutunu deneyin."
+            )
+
         except TelegramServerError:
             raise AssistantErr(
-    "**Telegram Sunucu Hatası**\n\nTelegram içinde bazı dahili sunucu sorunları yaşanıyor, Lütfen tekrar deneyin.\n\nEğer bu sorun her seferinde devam ederse, lütfen sesli sohbeti sonlandırın ve tekrar yeni bir sesli sohbet başlatın."
-)
+                "**Telegram Sunucu Hatası**\n\n"
+                "Telegram tarafında geçici bir hata oluştu. Lütfen tekrar deneyin.\n\n"
+                "Sorun devam ederse, sesli sohbeti kapatıp tekrar başlatın."
+            )
+
         await add_active_chat(chat_id)
         await mute_off(chat_id)
         await music_on(chat_id)

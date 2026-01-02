@@ -462,9 +462,10 @@ async def maintenance_on():
 from pytgcalls.types.stream import AudioQuality, VideoQuality
 
 # Audio
-HighQualityAudio = AudioQuality.HD
-MediumQualityAudio = AudioQuality.SD
+HighQualityAudio = AudioQuality.HIGH
+MediumQualityAudio = AudioQuality.MEDIUM
 LowQualityAudio = AudioQuality.LOW
+
 
 # Video
 HighQualityVideo = VideoQuality.FHD_1080P

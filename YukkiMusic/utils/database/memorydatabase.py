@@ -461,13 +461,16 @@ async def maintenance_on():
 
 from pytgcalls.types.stream import AudioQuality, VideoQuality
 
-HighQualityAudio = AudioQuality.HIGH
-MediumQualityAudio = AudioQuality.MEDIUM
+# Audio
+HighQualityAudio = AudioQuality.HD
+MediumQualityAudio = AudioQuality.SD
 LowQualityAudio = AudioQuality.LOW
 
-HighQualityVideo = VideoQuality.HIGH
-MediumQualityVideo = VideoQuality.MEDIUM
-LowQualityVideo = VideoQuality.LOW
+# Video
+HighQualityVideo = VideoQuality.FHD_1080P
+MediumQualityVideo = VideoQuality.HD_720P
+LowQualityVideo = VideoQuality.SD_480P
+
 
 
 async def save_audio_bitrate(chat_id: int, bitrate: str):

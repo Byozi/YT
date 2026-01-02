@@ -468,9 +468,9 @@ LowQualityAudio = AudioQuality.LOW
 
 
 # Video
-HighQualityVideo = VideoQuality.FHD_1080P
-MediumQualityVideo = VideoQuality.HD_720P
-LowQualityVideo = VideoQuality.SD_480P
+HighQualityVideo = VideoQuality.FHD_1080p
+MediumQualityVideo = VideoQuality.HD_720p
+LowQualityVideo = VideoQuality.SD_480p
 
 
 
